@@ -9,17 +9,66 @@
 /* Begin PBXBuildFile section */
 		704F918CD04A06A9C5E8CA40 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3175EA529DCB063D17D41DD /* Pods_Pokedex.framework */; };
 		BC263811293D344D00EB3223 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC263810293D344D00EB3223 /* Pokemon.swift */; };
+		BC263815293D6C9100EB3223 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC263814293D6C9100EB3223 /* PokemonCollectionViewCell.swift */; };
 		BC4DCB95293A8F790046E906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DCB94293A8F790046E906 /* AppDelegate.swift */; };
 		BC4DCB97293A8F790046E906 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DCB96293A8F790046E906 /* SceneDelegate.swift */; };
 		BC4DCB99293A8F790046E906 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DCB98293A8F790046E906 /* ViewController.swift */; };
 		BC4DCB9E293A8F7A0046E906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4DCB9D293A8F7A0046E906 /* Assets.xcassets */; };
 		BC4DCBA1293A8F7A0046E906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4DCB9F293A8F7A0046E906 /* LaunchScreen.storyboard */; };
 		BC4DCBA9293A9D750046E906 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DCBA8293A9D750046E906 /* NetworkingManager.swift */; };
+		BC699D86293FEA64006156EE /* Generation-iv.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D57293FEA64006156EE /* Generation-iv.swift */; };
+		BC699D87293FEA64006156EE /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D58293FEA64006156EE /* Move.swift */; };
+		BC699D88293FEA64006156EE /* Silver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D59293FEA64006156EE /* Silver.swift */; };
+		BC699D89293FEA64006156EE /* X-y.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D5A293FEA64006156EE /* X-y.swift */; };
+		BC699D8A293FEA64006156EE /* Move_learn_method.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D5B293FEA64006156EE /* Move_learn_method.swift */; };
+		BC699D8B293FEA64006156EE /* Red-blue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D5C293FEA64006156EE /* Red-blue.swift */; };
+		BC699D8C293FEA64006156EE /* Generation-iii.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D5D293FEA64006156EE /* Generation-iii.swift */; };
+		BC699D8D293FEA64006156EE /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D5E293FEA64006156EE /* Forms.swift */; };
+		BC699D8E293FEA64006156EE /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D5F293FEA64006156EE /* Sprites.swift */; };
+		BC699D8F293FEA64006156EE /* Versions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D60293FEA64006156EE /* Versions.swift */; };
+		BC699D90293FEA64006156EE /* Generation-viii.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D61293FEA64006156EE /* Generation-viii.swift */; };
+		BC699D91293FEA64006156EE /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D62293FEA64006156EE /* Ability.swift */; };
+		BC699D92293FEA64006156EE /* Generation-ii.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D63293FEA64006156EE /* Generation-ii.swift */; };
+		BC699D93293FEA64006156EE /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D64293FEA64006156EE /* Type.swift */; };
+		BC699D94293FEA64006156EE /* Black-white.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D65293FEA64006156EE /* Black-white.swift */; };
+		BC699D95293FEA64006156EE /* Firered-leafgreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D66293FEA64006156EE /* Firered-leafgreen.swift */; };
+		BC699D96293FEA64006156EE /* Abilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D67293FEA64006156EE /* Abilities.swift */; };
+		BC699D97293FEA64006156EE /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D68293FEA64006156EE /* Json4Swift_Base.swift */; };
+		BC699D98293FEA64006156EE /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D69293FEA64006156EE /* Version.swift */; };
+		BC699D99293FEA64006156EE /* Generation-vii.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D6A293FEA64006156EE /* Generation-vii.swift */; };
+		BC699D9A293FEA64006156EE /* Generation-i.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D6B293FEA64006156EE /* Generation-i.swift */; };
+		BC699D9B293FEA64006156EE /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D6C293FEA64006156EE /* Home.swift */; };
+		BC699D9C293FEA64006156EE /* Generation-v.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D6D293FEA64006156EE /* Generation-v.swift */; };
+		BC699D9D293FEA64006156EE /* Gold.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D6E293FEA64006156EE /* Gold.swift */; };
+		BC699D9E293FEA64006156EE /* Dream_world.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D6F293FEA64006156EE /* Dream_world.swift */; };
+		BC699D9F293FEA64006156EE /* Animated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D70293FEA64006156EE /* Animated.swift */; };
+		BC699DA0293FEA64006156EE /* Version_group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D71293FEA64006156EE /* Version_group.swift */; };
+		BC699DA1293FEA64006156EE /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D72293FEA64006156EE /* Icons.swift */; };
+		BC699DA2293FEA64006156EE /* Crystal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D73293FEA64006156EE /* Crystal.swift */; };
+		BC699DA3293FEA64006156EE /* Moves.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D74293FEA64006156EE /* Moves.swift */; };
+		BC699DA4293FEA64006156EE /* Emerald.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D75293FEA64006156EE /* Emerald.swift */; };
+		BC699DA5293FEA64006156EE /* Platinum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D76293FEA64006156EE /* Platinum.swift */; };
+		BC699DA6293FEA64006156EE /* Yellow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D77293FEA64006156EE /* Yellow.swift */; };
+		BC699DA7293FEA64006156EE /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D78293FEA64006156EE /* Species.swift */; };
+		BC699DA8293FEA64006156EE /* Game_indices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D79293FEA64006156EE /* Game_indices.swift */; };
+		BC699DA9293FEA64006156EE /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D7A293FEA64006156EE /* Stats.swift */; };
+		BC699DAA293FEA64006156EE /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D7B293FEA64006156EE /* Other.swift */; };
+		BC699DAB293FEA64006156EE /* Official-artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D7C293FEA64006156EE /* Official-artwork.swift */; };
+		BC699DAC293FEA64006156EE /* Version_group_details.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D7D293FEA64006156EE /* Version_group_details.swift */; };
+		BC699DAD293FEA64006156EE /* Ultra-sun-ultra-moon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D7E293FEA64006156EE /* Ultra-sun-ultra-moon.swift */; };
+		BC699DAE293FEA64006156EE /* Omegaruby-alphasapphire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D7F293FEA64006156EE /* Omegaruby-alphasapphire.swift */; };
+		BC699DAF293FEA64006156EE /* Heartgold-soulsilver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D80293FEA64006156EE /* Heartgold-soulsilver.swift */; };
+		BC699DB0293FEA64006156EE /* Ruby-sapphire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D81293FEA64006156EE /* Ruby-sapphire.swift */; };
+		BC699DB1293FEA64006156EE /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D82293FEA64006156EE /* Stat.swift */; };
+		BC699DB2293FEA64006156EE /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D83293FEA64006156EE /* Types.swift */; };
+		BC699DB3293FEA64006156EE /* Diamond-pearl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D84293FEA64006156EE /* Diamond-pearl.swift */; };
+		BC699DB4293FEA64006156EE /* Generation-vi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC699D85293FEA64006156EE /* Generation-vi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A93106C68EE3D09BF231D3B0 /* Pods-Pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.release.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.release.xcconfig"; sourceTree = "<group>"; };
 		BC263810293D344D00EB3223 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		BC263814293D6C9100EB3223 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC4DCB91293A8F790046E906 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4DCB94293A8F790046E906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC4DCB96293A8F790046E906 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +77,53 @@
 		BC4DCBA0293A8F7A0046E906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC4DCBA2293A8F7A0046E906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC4DCBA8293A9D750046E906 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		BC699D57293FEA64006156EE /* Generation-iv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generation-iv.swift"; sourceTree = "<group>"; };
+		BC699D58293FEA64006156EE /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		BC699D59293FEA64006156EE /* Silver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Silver.swift; sourceTree = "<group>"; };
+		BC699D5A293FEA64006156EE /* X-y.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "X-y.swift"; sourceTree = "<group>"; };
+		BC699D5B293FEA64006156EE /* Move_learn_method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move_learn_method.swift; sourceTree = "<group>"; };
+		BC699D5C293FEA64006156EE /* Red-blue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Red-blue.swift"; sourceTree = "<group>"; };
+		BC699D5D293FEA64006156EE /* Generation-iii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generation-iii.swift"; sourceTree = "<group>"; };
+		BC699D5E293FEA64006156EE /* Forms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
+		BC699D5F293FEA64006156EE /* Sprites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sprites.swift; sourceTree = "<group>"; };
+		BC699D60293FEA64006156EE /* Versions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Versions.swift; sourceTree = "<group>"; };
+		BC699D61293FEA64006156EE /* Generation-viii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generation-viii.swift"; sourceTree = "<group>"; };
+		BC699D62293FEA64006156EE /* Ability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
+		BC699D63293FEA64006156EE /* Generation-ii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generation-ii.swift"; sourceTree = "<group>"; };
+		BC699D64293FEA64006156EE /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		BC699D65293FEA64006156EE /* Black-white.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Black-white.swift"; sourceTree = "<group>"; };
+		BC699D66293FEA64006156EE /* Firered-leafgreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Firered-leafgreen.swift"; sourceTree = "<group>"; };
+		BC699D67293FEA64006156EE /* Abilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Abilities.swift; sourceTree = "<group>"; };
+		BC699D68293FEA64006156EE /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		BC699D69293FEA64006156EE /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		BC699D6A293FEA64006156EE /* Generation-vii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generation-vii.swift"; sourceTree = "<group>"; };
+		BC699D6B293FEA64006156EE /* Generation-i.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generation-i.swift"; sourceTree = "<group>"; };
+		BC699D6C293FEA64006156EE /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		BC699D6D293FEA64006156EE /* Generation-v.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generation-v.swift"; sourceTree = "<group>"; };
+		BC699D6E293FEA64006156EE /* Gold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gold.swift; sourceTree = "<group>"; };
+		BC699D6F293FEA64006156EE /* Dream_world.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dream_world.swift; sourceTree = "<group>"; };
+		BC699D70293FEA64006156EE /* Animated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animated.swift; sourceTree = "<group>"; };
+		BC699D71293FEA64006156EE /* Version_group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version_group.swift; sourceTree = "<group>"; };
+		BC699D72293FEA64006156EE /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		BC699D73293FEA64006156EE /* Crystal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crystal.swift; sourceTree = "<group>"; };
+		BC699D74293FEA64006156EE /* Moves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moves.swift; sourceTree = "<group>"; };
+		BC699D75293FEA64006156EE /* Emerald.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emerald.swift; sourceTree = "<group>"; };
+		BC699D76293FEA64006156EE /* Platinum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platinum.swift; sourceTree = "<group>"; };
+		BC699D77293FEA64006156EE /* Yellow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yellow.swift; sourceTree = "<group>"; };
+		BC699D78293FEA64006156EE /* Species.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		BC699D79293FEA64006156EE /* Game_indices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game_indices.swift; sourceTree = "<group>"; };
+		BC699D7A293FEA64006156EE /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		BC699D7B293FEA64006156EE /* Other.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
+		BC699D7C293FEA64006156EE /* Official-artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Official-artwork.swift"; sourceTree = "<group>"; };
+		BC699D7D293FEA64006156EE /* Version_group_details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version_group_details.swift; sourceTree = "<group>"; };
+		BC699D7E293FEA64006156EE /* Ultra-sun-ultra-moon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ultra-sun-ultra-moon.swift"; sourceTree = "<group>"; };
+		BC699D7F293FEA64006156EE /* Omegaruby-alphasapphire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Omegaruby-alphasapphire.swift"; sourceTree = "<group>"; };
+		BC699D80293FEA64006156EE /* Heartgold-soulsilver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Heartgold-soulsilver.swift"; sourceTree = "<group>"; };
+		BC699D81293FEA64006156EE /* Ruby-sapphire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ruby-sapphire.swift"; sourceTree = "<group>"; };
+		BC699D82293FEA64006156EE /* Stat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
+		BC699D83293FEA64006156EE /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		BC699D84293FEA64006156EE /* Diamond-pearl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diamond-pearl.swift"; sourceTree = "<group>"; };
+		BC699D85293FEA64006156EE /* Generation-vi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generation-vi.swift"; sourceTree = "<group>"; };
 		E3175EA529DCB063D17D41DD /* Pods_Pokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F429977A4022BEC22D3CBC7A /* Pods-Pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.debug.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,13 +173,69 @@
 				BC4DCB94293A8F790046E906 /* AppDelegate.swift */,
 				BC4DCB96293A8F790046E906 /* SceneDelegate.swift */,
 				BC4DCB98293A8F790046E906 /* ViewController.swift */,
+				BC263814293D6C9100EB3223 /* PokemonCollectionViewCell.swift */,
 				BC4DCBA8293A9D750046E906 /* NetworkingManager.swift */,
-				BC263810293D344D00EB3223 /* Pokemon.swift */,
+				BC699D56293FEA64006156EE /* Models */,
 				BC4DCB9D293A8F7A0046E906 /* Assets.xcassets */,
 				BC4DCB9F293A8F7A0046E906 /* LaunchScreen.storyboard */,
 				BC4DCBA2293A8F7A0046E906 /* Info.plist */,
 			);
 			path = Pokedex;
+			sourceTree = "<group>";
+		};
+		BC699D56293FEA64006156EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC263810293D344D00EB3223 /* Pokemon.swift */,
+				BC699D57293FEA64006156EE /* Generation-iv.swift */,
+				BC699D58293FEA64006156EE /* Move.swift */,
+				BC699D59293FEA64006156EE /* Silver.swift */,
+				BC699D5A293FEA64006156EE /* X-y.swift */,
+				BC699D5B293FEA64006156EE /* Move_learn_method.swift */,
+				BC699D5C293FEA64006156EE /* Red-blue.swift */,
+				BC699D5D293FEA64006156EE /* Generation-iii.swift */,
+				BC699D5E293FEA64006156EE /* Forms.swift */,
+				BC699D5F293FEA64006156EE /* Sprites.swift */,
+				BC699D60293FEA64006156EE /* Versions.swift */,
+				BC699D61293FEA64006156EE /* Generation-viii.swift */,
+				BC699D62293FEA64006156EE /* Ability.swift */,
+				BC699D63293FEA64006156EE /* Generation-ii.swift */,
+				BC699D64293FEA64006156EE /* Type.swift */,
+				BC699D65293FEA64006156EE /* Black-white.swift */,
+				BC699D66293FEA64006156EE /* Firered-leafgreen.swift */,
+				BC699D67293FEA64006156EE /* Abilities.swift */,
+				BC699D68293FEA64006156EE /* Json4Swift_Base.swift */,
+				BC699D69293FEA64006156EE /* Version.swift */,
+				BC699D6A293FEA64006156EE /* Generation-vii.swift */,
+				BC699D6B293FEA64006156EE /* Generation-i.swift */,
+				BC699D6C293FEA64006156EE /* Home.swift */,
+				BC699D6D293FEA64006156EE /* Generation-v.swift */,
+				BC699D6E293FEA64006156EE /* Gold.swift */,
+				BC699D6F293FEA64006156EE /* Dream_world.swift */,
+				BC699D70293FEA64006156EE /* Animated.swift */,
+				BC699D71293FEA64006156EE /* Version_group.swift */,
+				BC699D72293FEA64006156EE /* Icons.swift */,
+				BC699D73293FEA64006156EE /* Crystal.swift */,
+				BC699D74293FEA64006156EE /* Moves.swift */,
+				BC699D75293FEA64006156EE /* Emerald.swift */,
+				BC699D76293FEA64006156EE /* Platinum.swift */,
+				BC699D77293FEA64006156EE /* Yellow.swift */,
+				BC699D78293FEA64006156EE /* Species.swift */,
+				BC699D79293FEA64006156EE /* Game_indices.swift */,
+				BC699D7A293FEA64006156EE /* Stats.swift */,
+				BC699D7B293FEA64006156EE /* Other.swift */,
+				BC699D7C293FEA64006156EE /* Official-artwork.swift */,
+				BC699D7D293FEA64006156EE /* Version_group_details.swift */,
+				BC699D7E293FEA64006156EE /* Ultra-sun-ultra-moon.swift */,
+				BC699D7F293FEA64006156EE /* Omegaruby-alphasapphire.swift */,
+				BC699D80293FEA64006156EE /* Heartgold-soulsilver.swift */,
+				BC699D81293FEA64006156EE /* Ruby-sapphire.swift */,
+				BC699D82293FEA64006156EE /* Stat.swift */,
+				BC699D83293FEA64006156EE /* Types.swift */,
+				BC699D84293FEA64006156EE /* Diamond-pearl.swift */,
+				BC699D85293FEA64006156EE /* Generation-vi.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F1FCE4F62472E084EACC244D /* Frameworks */ = {
@@ -208,11 +360,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC699D9C293FEA64006156EE /* Generation-v.swift in Sources */,
+				BC699D86293FEA64006156EE /* Generation-iv.swift in Sources */,
+				BC699D96293FEA64006156EE /* Abilities.swift in Sources */,
+				BC699DB2293FEA64006156EE /* Types.swift in Sources */,
+				BC699D8B293FEA64006156EE /* Red-blue.swift in Sources */,
+				BC699DB0293FEA64006156EE /* Ruby-sapphire.swift in Sources */,
+				BC699DAF293FEA64006156EE /* Heartgold-soulsilver.swift in Sources */,
+				BC699D8F293FEA64006156EE /* Versions.swift in Sources */,
+				BC699D95293FEA64006156EE /* Firered-leafgreen.swift in Sources */,
+				BC699D97293FEA64006156EE /* Json4Swift_Base.swift in Sources */,
+				BC699D9B293FEA64006156EE /* Home.swift in Sources */,
+				BC699DA0293FEA64006156EE /* Version_group.swift in Sources */,
+				BC699D9A293FEA64006156EE /* Generation-i.swift in Sources */,
+				BC699D99293FEA64006156EE /* Generation-vii.swift in Sources */,
 				BC263811293D344D00EB3223 /* Pokemon.swift in Sources */,
+				BC699D8D293FEA64006156EE /* Forms.swift in Sources */,
+				BC699DAE293FEA64006156EE /* Omegaruby-alphasapphire.swift in Sources */,
+				BC699DA6293FEA64006156EE /* Yellow.swift in Sources */,
+				BC699DA2293FEA64006156EE /* Crystal.swift in Sources */,
+				BC699DA8293FEA64006156EE /* Game_indices.swift in Sources */,
+				BC699D9F293FEA64006156EE /* Animated.swift in Sources */,
 				BC4DCB99293A8F790046E906 /* ViewController.swift in Sources */,
+				BC699D9E293FEA64006156EE /* Dream_world.swift in Sources */,
+				BC699DAA293FEA64006156EE /* Other.swift in Sources */,
+				BC699DB1293FEA64006156EE /* Stat.swift in Sources */,
 				BC4DCBA9293A9D750046E906 /* NetworkingManager.swift in Sources */,
+				BC699DAB293FEA64006156EE /* Official-artwork.swift in Sources */,
+				BC699D87293FEA64006156EE /* Move.swift in Sources */,
+				BC699D8C293FEA64006156EE /* Generation-iii.swift in Sources */,
+				BC699D8A293FEA64006156EE /* Move_learn_method.swift in Sources */,
+				BC699D91293FEA64006156EE /* Ability.swift in Sources */,
+				BC699D88293FEA64006156EE /* Silver.swift in Sources */,
+				BC699DA5293FEA64006156EE /* Platinum.swift in Sources */,
+				BC699DA1293FEA64006156EE /* Icons.swift in Sources */,
+				BC699D89293FEA64006156EE /* X-y.swift in Sources */,
+				BC699DB4293FEA64006156EE /* Generation-vi.swift in Sources */,
+				BC699D98293FEA64006156EE /* Version.swift in Sources */,
+				BC699DAD293FEA64006156EE /* Ultra-sun-ultra-moon.swift in Sources */,
+				BC699DA7293FEA64006156EE /* Species.swift in Sources */,
 				BC4DCB95293A8F790046E906 /* AppDelegate.swift in Sources */,
+				BC699DB3293FEA64006156EE /* Diamond-pearl.swift in Sources */,
+				BC699DA9293FEA64006156EE /* Stats.swift in Sources */,
+				BC699D8E293FEA64006156EE /* Sprites.swift in Sources */,
+				BC699D93293FEA64006156EE /* Type.swift in Sources */,
+				BC263815293D6C9100EB3223 /* PokemonCollectionViewCell.swift in Sources */,
 				BC4DCB97293A8F790046E906 /* SceneDelegate.swift in Sources */,
+				BC699D94293FEA64006156EE /* Black-white.swift in Sources */,
+				BC699DA3293FEA64006156EE /* Moves.swift in Sources */,
+				BC699DA4293FEA64006156EE /* Emerald.swift in Sources */,
+				BC699D9D293FEA64006156EE /* Gold.swift in Sources */,
+				BC699DAC293FEA64006156EE /* Version_group_details.swift in Sources */,
+				BC699D92293FEA64006156EE /* Generation-ii.swift in Sources */,
+				BC699D90293FEA64006156EE /* Generation-viii.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

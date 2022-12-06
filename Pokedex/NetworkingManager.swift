@@ -36,8 +36,13 @@ class NetworkManager {
                 
             case .success(let data):
                 let jd = JSONDecoder()
-                if let response = try? jd.decode(PokemonDetails.self, from: data) {
-                    completion(response.sprites.front_default)
+                if let response = try? jd.decode(Json4Swift_Base.self, from: data) {
+                    if let sprites = response.sprites, let imageUrl = sprites.front_default {
+                        completion(imageUrl)
+                    }
+                }
+                else {
+                    print("failed to decode")
                 }
                 
             case .failure(let error):
