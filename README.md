@@ -2,9 +2,9 @@
 
 ## Overview
 
-- Completed Milestone 1. 
-- Added border to display screen. 
-- Credit: Swift models in this project are generated from JSON powered by http://www.json4swift.com
+- Simple Pokedex app that fetches the list of Pokemons from https://pokeapi.co/ and shows them in a grid
+- When you tap on a Pokemon, it is displayed in the top center
+- Added border to display screen
 
 ## Demo
 
