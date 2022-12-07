@@ -12,16 +12,17 @@ class NetworkManager {
     
     static let host = "https://pokeapi.co/api/v2/pokemon"
     
-    static func getPokemons(limit: Int, offset: Int, completion: @escaping ([Pokemon]) -> Void) {
-        let endpt = "\(host)?limit=\(String(limit))&offset=\(String(offset))/"
+    static func getPokemons(completion: @escaping ([Pokemon]) -> Void) {
+
+        let endpt = "\(host)?limit=1154/"
         
         AF.request(endpt, method: .get).validate().responseData { response in
             switch response.result {
                 
             case .success(let data):
                 let jd = JSONDecoder()
-                if let response = try? jd.decode(PokemonResponse.self, from: data) {
-                    completion(response.results)
+                if let response = try? jd.decode(PokemonResponse.self, from: data){
+                    completion(response.results ?? [])
                 }
                 
             case .failure(let error):
@@ -30,23 +31,26 @@ class NetworkManager {
         }
     }
     
-    static func getSpriteByUrl(url: String, completion: @escaping (String) -> Void) {
-        AF.request(url, method: .get).validate().responseData { response in
-            switch response.result {
-                
-            case .success(let data):
-                let jd = JSONDecoder()
-                if let response = try? jd.decode(Json4Swift_Base.self, from: data) {
-                    if let sprites = response.sprites, let imageUrl = sprites.front_default {
-                        completion(imageUrl)
+    static func getImagesByUrl(pokemons: [Pokemon], completion: @escaping ([String]) -> Void) {
+        var result: [String] = []
+        for pokemon in pokemons {
+            if let imageUrl = pokemon.url {
+                AF.request(imageUrl, method: .get).validate().responseData { response in
+                    switch response.result {
+                        
+                    case .success(let data):
+                        let jd = JSONDecoder()
+                        if let response = try? jd.decode(Json4Swift_Base.self, from: data) {
+                            if let sprites = response.sprites, let imageUrl = sprites.front_default {
+                                result.append(imageUrl)
+                            }
+                        }
+                        completion(result)
+                        
+                    case .failure(let error):
+                        print(error.localizedDescription)
                     }
                 }
-                else {
-                    print("failed to decode")
-                }
-                
-            case .failure(let error):
-                print(error.localizedDescription)
             }
         }
     }

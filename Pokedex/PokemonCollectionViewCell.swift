@@ -11,25 +11,25 @@ import UIKit
 class PokemonCollectionViewCell: UICollectionViewCell {
     let pokemonImageView: UIImageView
     
-    func configure(_ str: String?) {
+    func configure(with str: String?) {
         if let urlstr = str, let url = URL(string: urlstr) {
-            pokemonImageView.load(url: url)
+            pokemonImageView.load(from: url)
             pokemonImageView.contentMode = .scaleAspectFit
         }
     }
     
     override init(frame: CGRect) {
-        pokemonImageView = UIImageView(frame: CGRect(origin: frame.origin, size: frame.size))
+        pokemonImageView = UIImageView(frame: frame)
         super.init(frame: frame)
         
         pokemonImageView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(pokemonImageView)
         
         NSLayoutConstraint.activate([
-            pokemonImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            pokemonImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            pokemonImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            pokemonImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            pokemonImageView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
+            pokemonImageView.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor),
+            pokemonImageView.leftAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leftAnchor),
+            pokemonImageView.rightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.rightAnchor),
         ])
     }
     
@@ -39,15 +39,19 @@ class PokemonCollectionViewCell: UICollectionViewCell {
 }
 
 extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
+   func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+      URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+   }
+    
+   func load(from url: URL) {
+      getData(from: url) {
+         data, response, error in
+         guard let data = data, error == nil else {
+            return
+         }
+         DispatchQueue.main.async() {
+            self.image = UIImage(data: data)
+         }
+      }
+   }
 }

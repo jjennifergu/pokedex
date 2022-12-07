@@ -8,13 +8,13 @@
 import Foundation
 
 struct Pokemon: Codable, Equatable {
-    let name: String
-    let url: String
+    let name: String?
+    let url: String?
 }
 
 struct PokemonResponse: Codable {
-    let count: Int
+    let count: Int?
     let next: String?
     let previous: String?
-    let results: [Pokemon]
+    let results: [Pokemon]?
 }

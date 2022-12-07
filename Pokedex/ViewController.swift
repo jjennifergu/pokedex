@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var displayScreenView = UIImageView()
+    let overlay = UIImageView(image: UIImage(named: "pokedexOverlay"))
     var pokemonCollectionView: UICollectionView!
     let pokemonCellReuseIdentifier = "pokemonCellReuseIdentifier"
     
@@ -19,25 +20,27 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getPokemons(limit: 1, offset: 0)
+        title = "Pokédex"
+        getPokemons(completion: {
+            self.getPokemonImages(pokemons: self.pokemonData, completion: {
+                self.pokemonCollectionView.reloadData()
+            })
+        })
         setUpUIComponents()
         setUpConstraints()
     }
     
-    func getPokemons(limit: Int, offset: Int) {
-        NetworkManager.getPokemons(limit: limit, offset: offset, completion: { pokemon in
-            self.pokemonData = pokemon
-            for p in pokemon {
-                self.getPokemonImage(pokemon: p)
-            }
-            print(self.pokemonData)
-            self.pokemonCollectionView.reloadData()
+    func getPokemons(completion: @escaping () -> Void) {
+        NetworkManager.getPokemons(completion: { response in
+            self.pokemonData = response
+            completion()
         })
     }
     
-    func getPokemonImage(pokemon: Pokemon) {
-        NetworkManager.getSpriteByUrl(url: pokemon.url, completion: { url in
-            self.pokemonImageUrls.append(url)
+    func getPokemonImages(pokemons: [Pokemon], completion: @escaping () -> Void) {
+        NetworkManager.getImagesByUrl(pokemons: pokemons, completion: { response in
+            self.pokemonImageUrls = response
+            completion()
         })
     }
     
@@ -45,7 +48,14 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         
         displayScreenView.translatesAutoresizingMaskIntoConstraints = false
+        displayScreenView.backgroundColor = .black
+        displayScreenView.contentMode = .scaleAspectFit
         view.addSubview(displayScreenView)
+        
+        overlay.translatesAutoresizingMaskIntoConstraints = false
+        overlay.backgroundColor = .clear
+        overlay.contentMode = .scaleAspectFit
+        view.addSubview(overlay)
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -65,11 +75,18 @@ class ViewController: UIViewController {
             displayScreenView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             displayScreenView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             displayScreenView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
-            displayScreenView.heightAnchor.constraint(equalToConstant: 300)
+            displayScreenView.heightAnchor.constraint(equalToConstant: 250)
         ])
         
         NSLayoutConstraint.activate([
-            pokemonCollectionView.topAnchor.constraint(equalTo: displayScreenView.bottomAnchor),
+            overlay.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: -16),
+            overlay.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            overlay.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            overlay.heightAnchor.constraint(equalToConstant: 300)
+        ])
+        
+        NSLayoutConstraint.activate([
+            pokemonCollectionView.topAnchor.constraint(equalTo: displayScreenView.bottomAnchor, constant: 16),
             pokemonCollectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             pokemonCollectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             pokemonCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
@@ -81,12 +98,12 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedPokemonImageUrl = pokemonImageUrls[indexPath.item]
         if let str = self.selectedPokemonImageUrl, let url = URL(string: str) {
-            self.displayScreenView.load(url: url)
+            self.displayScreenView.load(from: url)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = pokemonCollectionView.frame.width/3
+        let size = pokemonCollectionView.frame.width/3 - 8
         return CGSize(width: size, height: size)
     }
 }
@@ -98,7 +115,7 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = pokemonCollectionView.dequeueReusableCell(withReuseIdentifier: pokemonCellReuseIdentifier, for: indexPath) as! PokemonCollectionViewCell
-        cell.configure(pokemonImageUrls[indexPath.item])
+        cell.configure(with: pokemonImageUrls[indexPath.item])
         return cell
     }
 }
